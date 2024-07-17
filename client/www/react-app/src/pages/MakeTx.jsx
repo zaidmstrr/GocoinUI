@@ -5,8 +5,7 @@ import SideNavBar from '../component/SideNavBar'
 function MakeTx() {
   return (
     <div>
-        <TopNavBar />
-        <SideNavBar />
+        {/* <SideNavBar /> */}
         <DisplayWallet />
     </div>
   )

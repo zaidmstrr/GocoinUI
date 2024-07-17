@@ -5,8 +5,7 @@ import SideNavBar from '../component/SideNavBar';
 function Wallet() {
   return (
     <div className='flex flex-row'>
-        <TopNavBar />
-        <SideNavBar />
+        {/* <SideNavBar /> */}
         <WalletStatus />
     </div>
   )

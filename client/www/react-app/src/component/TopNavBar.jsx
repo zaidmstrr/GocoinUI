@@ -11,7 +11,7 @@ import beep from '../assets/beep.mp3';
 
 function TopNavBar() {
   let [lastBlock, setLastBlock] = useState('XXX');
-  let [block, setBlock] = useState(0);
+  let [block, setBlock] = useState(localStorage.getItem('block'));
   const [chainInSync, setChainInSync] = useState(false);
   const [walletOn, setWalletOn] = useState(false);
   const [timeNow, setTimeNow] = useState(null);
@@ -35,7 +35,7 @@ function TopNavBar() {
         setTimeNow(data.Time_now);
         setLastHeaderHeight(data.LastHeaderHeight)
 
-        setTimeout(refreshBlock, parseInt(data.Height, 10) !== lastBlock ? 1000 : 6000);
+        setTimeout(refreshBlock, parseInt(data.Height, 10) !== lastBlock ? 2000 : 6000);
       } catch (error) {
         console.error(error);
         setTimeout(refreshBlock, 10000);
@@ -46,6 +46,7 @@ function TopNavBar() {
   }, [lastBlock, setBlockHeight, setMinVal]);
 
   useEffect(() => {
+    localStorage.setItem('blocks', lastBlock)
     // if (block !== lastBlock && soundEnabled) {
     //   const audio = new Audio(beep);
     //   audio.play();
@@ -54,11 +55,14 @@ function TopNavBar() {
     // }
   }, [lastBlock, soundEnabled, block]);
 
-  if (block !== lastBlock) {
+  let blockCheck = localStorage.getItem('block')
+  if (blockCheck != lastBlock) {
+    localStorage.setItem('block', lastBlock)
+    // setBlock(lastBlock);
     if(soundEnabled) {
       const audio = new Audio(beep);
       audio.play();
-      setBlock(lastBlock);
+      // setBlock(lastBlock);
       console.log("Beep sound played");
     }
   }

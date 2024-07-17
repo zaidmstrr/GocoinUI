@@ -28,7 +28,7 @@ function SideNavBar() {
   return (
     <>
         
-        <TopNavBar />
+        {/* <TopNavBar /> */}
         <div className="flex fixed h-full bg-gray-950">
 
 

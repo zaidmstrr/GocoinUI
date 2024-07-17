@@ -41,7 +41,6 @@ function ActiveWalletPage() {
     // if (storedName) {
     let    tempNames = (JSON.parse(storedName))
     // }
-    console.log(storedName)
     const [walletData, setWalletData] = useState('Default');
     const [walletName, setWalletName] = useState('Default');
 
@@ -74,7 +73,6 @@ function ActiveWalletPage() {
         console.log(JSON.parse(storedName));
         }
 
-        console.log(storedNames)
         // setWalletName(localStorage.getItem(`walletName${storedNames[0]}`));
 
         // setWalletData(localStorage.getItem(`textareaValue${storedNames[0]}`))

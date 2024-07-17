@@ -13,8 +13,6 @@ const WriteAndSavePopup = ({name}) => {
   const [walletNamesArray, setWalletNamesArray] = useState([])
 //   const [walletName, setWalletName] = useState('Default');
 
-console.log("name:" + name)
-
   const [walletName, setWalletName] = useState(name);
   const [walletNameToShow, setwalletNameToShow] = useState(name);
   const [walletTextToShow, setwalletTextToShow] = useState(localStorage.getItem(`textareaValue${name}`));
