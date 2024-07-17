@@ -113,3 +113,4 @@ for possible ways of contacting me.
 
 If you want to support this project, I ask you to run your own Gocoin node, prefably with TCP port 8333
 open for the outside world. Do not hestiate to report any issues you find.
+# GocoinUI
