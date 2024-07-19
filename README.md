@@ -27,6 +27,7 @@ For other performance charts see [gocoin.pl](https://gocoin.pl/gocoin_performanc
 
 This is the new proposed UI interface for the GoCoin
 New UI glimps:
+
 ![a8](https://github.com/user-attachments/assets/bd83a9cb-0ef9-4484-b393-fc265b7944e9)
 ![a9](https://github.com/user-attachments/assets/402759c1-2f68-47a4-b8ee-bdfe60b74d51)
 ![a10](https://github.com/user-attachments/assets/a2052102-7fa6-4972-b18c-471bace0a154)
