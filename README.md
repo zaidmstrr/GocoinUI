@@ -25,6 +25,15 @@ Clients using their default configuration, except for the second (blue) Bitcoin 
 that is set to use **dbcache=16384**.<br/>
 For other performance charts see [gocoin.pl](https://gocoin.pl/gocoin_performance.html) website.*
 
+This is the new proposed UI interface for the GoCoin
+New UI glimps:
+
+![a8](https://github.com/user-attachments/assets/bd83a9cb-0ef9-4484-b393-fc265b7944e9)
+![a9](https://github.com/user-attachments/assets/402759c1-2f68-47a4-b8ee-bdfe60b74d51)
+![a10](https://github.com/user-attachments/assets/a2052102-7fa6-4972-b18c-471bace0a154)
+![b6](https://github.com/user-attachments/assets/5baa37aa-9fc3-4055-a56c-62f60694fdcf)
+![a11](https://github.com/user-attachments/assets/213ab548-37c7-4c5d-bdab-047cbe04cb1a)
+
 # Requirements
 
 ## Hardware
