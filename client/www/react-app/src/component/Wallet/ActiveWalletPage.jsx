@@ -43,18 +43,13 @@ function ActiveWalletPage() {
     // }
     const [walletData, setWalletData] = useState('Default');
     const [walletName, setWalletName] = useState('Default');
-
-    
-    
+ 
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
     const [mempool, setMempool] = useState(true);
 
 
     let setWalletRefresh = useSetRecoilState(callWalletRefresh)
-    // console.log(walletRefreshValue)
-
-    // console.log(walletName)
 
     // const walletData = localStorage.getItem('textareaValue')
 
@@ -63,19 +58,38 @@ function ActiveWalletPage() {
         setWalletData(localStorage.getItem(`textareaValue${name}`));
     };
     
-    const fetchWalletBalance = async () => {
+    useEffect(() => {
+          const storedName = localStorage.getItem('names');
+          console.log(storedName)
+        if (storedName) {
+            setStoredNames(JSON.parse(storedName))
+        // console.log(JSON.parse(storedName));
+        let tempNames = JSON.parse(storedName)
+        setWalletName(localStorage.getItem(`walletName${tempNames[0]}`));
 
-        
+        setWalletData(localStorage.getItem(`textareaValue${tempNames[0]}`))
+
+        }
+        else {
+            setWalletName('Default');
+
+            setWalletData('Default')
+        }
+
+    },[])
+
+    const fetchWalletBalance = async () => {
 
         const storedName = localStorage.getItem('names');
         if (storedName) {
             setStoredNames(JSON.parse(storedName))
-        console.log(JSON.parse(storedName));
+        // console.log(JSON.parse(storedName));
         }
 
         // setWalletName(localStorage.getItem(`walletName${storedNames[0]}`));
 
         // setWalletData(localStorage.getItem(`textareaValue${storedNames[0]}`))
+
         let name  = "MyWallet"
       const  wallet = parse_wallet(walletData)
       setLocalWalletData(wallet);
